@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-
+import { fetchTodos } from './fetch_functions';
+console.log(fetchTodos);
 export default function Home() {
   const [toDoList, setToDoList] = useState([
     { text: "something", checked: false },
