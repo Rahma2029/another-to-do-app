@@ -22,10 +22,10 @@ export async function addTodo(todo: any) {
   }
 }
 
-export async function updateTodo(id, todo) {
+export async function updateTodo(id: number, todo: any) {
   try {
-    const response = await fetch(`https://669872b22069c438cd6ec955.mockapi.io/ToDo${id}`, {
-      method: 'PUT',
+    const response = await fetch(`https://669872b22069c438cd6ec955.mockapi.io/ToDo`, {
+      method: 'POST', // I just changed this from PUT to POST
       headers: {
         'Content-Type': 'application/json'
       },
@@ -37,7 +37,7 @@ export async function updateTodo(id, todo) {
   }
 }
 
-export async function deleteTodo(id) {
+export async function deleteTodo(id: any) {
   try {
     await fetch(`https://669872b22069c438cd6ec955.mockapi.io/ToDo/${id}`, {
       method: 'DELETE'

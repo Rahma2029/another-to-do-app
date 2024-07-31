@@ -31,7 +31,7 @@ export default function Home() {
   };
 
 
-  const toggleCheck = (index: any) => {
+  const toggleCheck = (index: number) => {
     const updatedTodo = { ...toDoList[index], CheckBox: !toDoList[index].CheckBox };
     updateTodo(toDoList[index].id, updatedTodo)
       .then((updated) => {
